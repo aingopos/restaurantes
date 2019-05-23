@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="AdministradorSistemaViewDlg" widgetVar="AdministradorSistemaViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewAdministradorSistemaTitle}">
+            <h:form id="AdministradorSistemaViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{administradorSistemaController.selected != null}">
+                        <h:outputText value="#{bundle.ViewAdministradorSistemaLabel_idAdmin}"/>
+                        <h:outputText value="#{administradorSistemaController.selected.idAdmin}" title="#{bundle.ViewAdministradorSistemaTitle_idAdmin}"/>
+                        <h:outputText value="#{bundle.ViewAdministradorSistemaLabel_admCorreo}"/>
+                        <h:outputText value="#{administradorSistemaController.selected.admCorreo}" title="#{bundle.ViewAdministradorSistemaTitle_admCorreo}"/>
+                        <h:outputText value="#{bundle.ViewAdministradorSistemaLabel_admClave}"/>
+                        <h:outputText value="#{administradorSistemaController.selected.admClave}" title="#{bundle.ViewAdministradorSistemaTitle_admClave}"/>
+                        <h:outputText value="#{bundle.ViewAdministradorSistemaLabel_tipoAdmin}"/>
+                        <h:outputText value="#{administradorSistemaController.selected.tipoAdmin}" title="#{bundle.ViewAdministradorSistemaTitle_tipoAdmin}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="AdministradorSistemaViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

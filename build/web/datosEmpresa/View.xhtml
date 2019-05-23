@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="DatosEmpresaViewDlg" widgetVar="DatosEmpresaViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewDatosEmpresaTitle}">
+            <h:form id="DatosEmpresaViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{datosEmpresaController.selected != null}">
+                        <h:outputText value="#{bundle.ViewDatosEmpresaLabel_datEmpId}"/>
+                        <h:outputText value="#{datosEmpresaController.selected.datEmpId}" title="#{bundle.ViewDatosEmpresaTitle_datEmpId}"/>
+                        <h:outputText value="#{bundle.ViewDatosEmpresaLabel_datEmpNombre}"/>
+                        <h:outputText value="#{datosEmpresaController.selected.datEmpNombre}" title="#{bundle.ViewDatosEmpresaTitle_datEmpNombre}"/>
+                        <h:outputText value="#{bundle.ViewDatosEmpresaLabel_datEmpRazonSocial}"/>
+                        <h:outputText value="#{datosEmpresaController.selected.datEmpRazonSocial}" title="#{bundle.ViewDatosEmpresaTitle_datEmpRazonSocial}"/>
+                        <h:outputText value="#{bundle.ViewDatosEmpresaLabel_datEmpTelefono}"/>
+                        <h:outputText value="#{datosEmpresaController.selected.datEmpTelefono}" title="#{bundle.ViewDatosEmpresaTitle_datEmpTelefono}"/>
+                        <h:outputText value="#{bundle.ViewDatosEmpresaLabel_datEmpNit}"/>
+                        <h:outputText value="#{datosEmpresaController.selected.datEmpNit}" title="#{bundle.ViewDatosEmpresaTitle_datEmpNit}"/>
+                        <h:outputText value="#{bundle.ViewDatosEmpresaLabel_datEmpDireccion}"/>
+                        <h:outputText value="#{datosEmpresaController.selected.datEmpDireccion}" title="#{bundle.ViewDatosEmpresaTitle_datEmpDireccion}"/>
+                        <h:outputText value="#{bundle.ViewDatosEmpresaLabel_datEmpEmail}"/>
+                        <h:outputText value="#{datosEmpresaController.selected.datEmpEmail}" title="#{bundle.ViewDatosEmpresaTitle_datEmpEmail}"/>
+                        <h:outputText value="#{bundle.ViewDatosEmpresaLabel_datEmpPaginaWeb}"/>
+                        <h:outputText value="#{datosEmpresaController.selected.datEmpPaginaWeb}" title="#{bundle.ViewDatosEmpresaTitle_datEmpPaginaWeb}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="DatosEmpresaViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

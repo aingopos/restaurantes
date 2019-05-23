@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="EmpleadoCreateDlg" widgetVar="EmpleadoCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateEmpleadoTitle}">
+            <h:form id="EmpleadoCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{empleadoController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateEmpleadoLabel_empleadoCedula}" for="empleadoCedula" />
+                        <p:inputText id="empleadoCedula" value="#{empleadoController.selected.empleadoCedula}" title="#{bundle.CreateEmpleadoTitle_empleadoCedula}" required="true" requiredMessage="#{bundle.CreateEmpleadoRequiredMessage_empleadoCedula}"/>
+                        <p:outputLabel value="#{bundle.CreateEmpleadoLabel_empleadoNombre}" for="empleadoNombre" />
+                        <p:inputText id="empleadoNombre" value="#{empleadoController.selected.empleadoNombre}" title="#{bundle.CreateEmpleadoTitle_empleadoNombre}" />
+                        <p:outputLabel value="#{bundle.CreateEmpleadoLabel_empleadoApellidos}" for="empleadoApellidos" />
+                        <p:inputText id="empleadoApellidos" value="#{empleadoController.selected.empleadoApellidos}" title="#{bundle.CreateEmpleadoTitle_empleadoApellidos}" />
+                        <p:outputLabel value="#{bundle.CreateEmpleadoLabel_empleadoTelefono}" for="empleadoTelefono" />
+                        <p:inputText id="empleadoTelefono" value="#{empleadoController.selected.empleadoTelefono}" title="#{bundle.CreateEmpleadoTitle_empleadoTelefono}" />
+                        <p:outputLabel value="#{bundle.CreateEmpleadoLabel_empleadoDireccion}" for="empleadoDireccion" />
+                        <p:inputText id="empleadoDireccion" value="#{empleadoController.selected.empleadoDireccion}" title="#{bundle.CreateEmpleadoTitle_empleadoDireccion}" />
+                        <p:outputLabel value="#{bundle.CreateEmpleadoLabel_empleadoSalario}" for="empleadoSalario" />
+                        <p:inputText id="empleadoSalario" value="#{empleadoController.selected.empleadoSalario}" title="#{bundle.CreateEmpleadoTitle_empleadoSalario}" />
+                        <p:outputLabel value="#{bundle.CreateEmpleadoLabel_empleadoFoto}" for="empleadoFoto" />
+                        <p:inputText id="empleadoFoto" value="#{empleadoController.selected.empleadoFoto}" title="#{bundle.CreateEmpleadoTitle_empleadoFoto}" />
+                        <p:outputLabel value="#{bundle.CreateEmpleadoLabel_empleadoFechaIngreso}" for="empleadoFechaIngreso" />
+                        <p:inputText id="empleadoFechaIngreso" value="#{empleadoController.selected.empleadoFechaIngreso}" title="#{bundle.CreateEmpleadoTitle_empleadoFechaIngreso}" />
+                        <p:outputLabel value="#{bundle.CreateEmpleadoLabel_tipoEmpleado}" for="tipoEmpleado" />
+                        <p:inputText id="tipoEmpleado" value="#{empleadoController.selected.tipoEmpleado}" title="#{bundle.CreateEmpleadoTitle_tipoEmpleado}" />
+                        <p:outputLabel value="#{bundle.CreateEmpleadoLabel_empleadoLogin}" for="empleadoLogin" />
+                        <p:inputText id="empleadoLogin" value="#{empleadoController.selected.empleadoLogin}" title="#{bundle.CreateEmpleadoTitle_empleadoLogin}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{empleadoController.create}" value="#{bundle.Save}" update="display,:EmpleadoListForm:datalist,:growl" oncomplete="handleSubmit(args,'EmpleadoCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="EmpleadoCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

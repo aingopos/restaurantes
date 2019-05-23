@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="AdicionEditDlg" widgetVar="AdicionEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditAdicionTitle}">
+            <h:form id="AdicionEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{adicionController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditAdicionLabel_idadicion}" for="idadicion" />
+                        <p:inputText id="idadicion" value="#{adicionController.selected.idadicion}" title="#{bundle.EditAdicionTitle_idadicion}" required="true" requiredMessage="#{bundle.EditAdicionRequiredMessage_idadicion}"/>
+                        <p:outputLabel value="#{bundle.EditAdicionLabel_adicionNombre}" for="adicionNombre" />
+                        <p:inputText id="adicionNombre" value="#{adicionController.selected.adicionNombre}" title="#{bundle.EditAdicionTitle_adicionNombre}" />
+                        <p:outputLabel value="#{bundle.EditAdicionLabel_adicionDescripcion}" for="adicionDescripcion" />
+                        <p:inputText id="adicionDescripcion" value="#{adicionController.selected.adicionDescripcion}" title="#{bundle.EditAdicionTitle_adicionDescripcion}" />
+                        <p:outputLabel value="#{bundle.EditAdicionLabel_adicionPrecio}" for="adicionPrecio" />
+                        <p:inputText id="adicionPrecio" value="#{adicionController.selected.adicionPrecio}" title="#{bundle.EditAdicionTitle_adicionPrecio}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{adicionController.update}" value="#{bundle.Save}" update="display,:AdicionListForm:datalist,:growl" oncomplete="handleSubmit(args, 'AdicionEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="AdicionEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

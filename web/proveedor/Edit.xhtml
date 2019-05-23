@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ProveedorEditDlg" widgetVar="ProveedorEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditProveedorTitle}">
+            <h:form id="ProveedorEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{proveedorController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditProveedorLabel_provCedula}" for="provCedula" />
+                        <p:inputText id="provCedula" value="#{proveedorController.selected.provCedula}" title="#{bundle.EditProveedorTitle_provCedula}" required="true" requiredMessage="#{bundle.EditProveedorRequiredMessage_provCedula}"/>
+                        <p:outputLabel value="#{bundle.EditProveedorLabel_provNombre}" for="provNombre" />
+                        <p:inputText id="provNombre" value="#{proveedorController.selected.provNombre}" title="#{bundle.EditProveedorTitle_provNombre}" required="true" requiredMessage="#{bundle.EditProveedorRequiredMessage_provNombre}"/>
+                        <p:outputLabel value="#{bundle.EditProveedorLabel_provApellidos}" for="provApellidos" />
+                        <p:inputText id="provApellidos" value="#{proveedorController.selected.provApellidos}" title="#{bundle.EditProveedorTitle_provApellidos}" required="true" requiredMessage="#{bundle.EditProveedorRequiredMessage_provApellidos}"/>
+                        <p:outputLabel value="#{bundle.EditProveedorLabel_provTelefono}" for="provTelefono" />
+                        <p:inputText id="provTelefono" value="#{proveedorController.selected.provTelefono}" title="#{bundle.EditProveedorTitle_provTelefono}" />
+                        <p:outputLabel value="#{bundle.EditProveedorLabel_provCelular}" for="provCelular" />
+                        <p:inputText id="provCelular" value="#{proveedorController.selected.provCelular}" title="#{bundle.EditProveedorTitle_provCelular}" />
+                        <p:outputLabel value="#{bundle.EditProveedorLabel_provReputacion}" for="provReputacion" />
+                        <p:inputTextarea rows="4" cols="30" id="provReputacion" value="#{proveedorController.selected.provReputacion}" title="#{bundle.EditProveedorTitle_provReputacion}" />
+                        <p:outputLabel value="#{bundle.EditProveedorLabel_provCorreo}" for="provCorreo" />
+                        <p:inputText id="provCorreo" value="#{proveedorController.selected.provCorreo}" title="#{bundle.EditProveedorTitle_provCorreo}" />
+                        <p:outputLabel value="#{bundle.EditProveedorLabel_provPaginaWeb}" for="provPaginaWeb" />
+                        <p:inputTextarea rows="4" cols="30" id="provPaginaWeb" value="#{proveedorController.selected.provPaginaWeb}" title="#{bundle.EditProveedorTitle_provPaginaWeb}" required="true" requiredMessage="#{bundle.EditProveedorRequiredMessage_provPaginaWeb}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{proveedorController.update}" value="#{bundle.Save}" update="display,:ProveedorListForm:datalist,:growl" oncomplete="handleSubmit(args, 'ProveedorEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="ProveedorEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

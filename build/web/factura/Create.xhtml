@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="FacturaCreateDlg" widgetVar="FacturaCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateFacturaTitle}">
+            <h:form id="FacturaCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{facturaController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateFacturaLabel_facCodigo}" for="facCodigo" />
+                        <p:inputText id="facCodigo" value="#{facturaController.selected.facCodigo}" title="#{bundle.CreateFacturaTitle_facCodigo}" required="true" requiredMessage="#{bundle.CreateFacturaRequiredMessage_facCodigo}"/>
+                        <p:outputLabel value="#{bundle.CreateFacturaLabel_facFecha}" for="facFecha" />
+                        <p:inputText id="facFecha" value="#{facturaController.selected.facFecha}" title="#{bundle.CreateFacturaTitle_facFecha}" />
+                        <p:outputLabel value="#{bundle.CreateFacturaLabel_facFormaPago}" for="facFormaPago" />
+                        <p:inputText id="facFormaPago" value="#{facturaController.selected.facFormaPago}" title="#{bundle.CreateFacturaTitle_facFormaPago}" />
+                        <p:outputLabel value="#{bundle.CreateFacturaLabel_empleadoId}" for="empleadoId" />
+                        <p:inputText id="empleadoId" value="#{facturaController.selected.empleadoId}" title="#{bundle.CreateFacturaTitle_empleadoId}" required="true" requiredMessage="#{bundle.CreateFacturaRequiredMessage_empleadoId}"/>
+                        <p:outputLabel value="#{bundle.CreateFacturaLabel_total}" for="total" />
+                        <p:inputText id="total" value="#{facturaController.selected.total}" title="#{bundle.CreateFacturaTitle_total}" />
+                        <p:outputLabel value="#{bundle.CreateFacturaLabel_tax}" for="tax" />
+                        <p:inputText id="tax" value="#{facturaController.selected.tax}" title="#{bundle.CreateFacturaTitle_tax}" />
+                        <p:outputLabel value="#{bundle.CreateFacturaLabel_granTotal}" for="granTotal" />
+                        <p:inputText id="granTotal" value="#{facturaController.selected.granTotal}" title="#{bundle.CreateFacturaTitle_granTotal}" />
+                        <p:outputLabel value="#{bundle.CreateFacturaLabel_mesaid}" for="mesaid" />
+                        <p:inputText id="mesaid" value="#{facturaController.selected.mesaid}" title="#{bundle.CreateFacturaTitle_mesaid}" />
+                        <p:outputLabel value="#{bundle.CreateFacturaLabel_pedidoId}" for="pedidoId" />
+                        <p:inputText id="pedidoId" value="#{facturaController.selected.pedidoId}" title="#{bundle.CreateFacturaTitle_pedidoId}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{facturaController.create}" value="#{bundle.Save}" update="display,:FacturaListForm:datalist,:growl" oncomplete="handleSubmit(args,'FacturaCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="FacturaCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

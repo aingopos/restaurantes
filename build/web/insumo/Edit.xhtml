@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="InsumoEditDlg" widgetVar="InsumoEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditInsumoTitle}">
+            <h:form id="InsumoEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{insumoController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditInsumoLabel_idInsumo}" for="idInsumo" />
+                        <p:inputText id="idInsumo" value="#{insumoController.selected.idInsumo}" title="#{bundle.EditInsumoTitle_idInsumo}" required="true" requiredMessage="#{bundle.EditInsumoRequiredMessage_idInsumo}"/>
+                        <p:outputLabel value="#{bundle.EditInsumoLabel_insumoNombre}" for="insumoNombre" />
+                        <p:inputText id="insumoNombre" value="#{insumoController.selected.insumoNombre}" title="#{bundle.EditInsumoTitle_insumoNombre}" required="true" requiredMessage="#{bundle.EditInsumoRequiredMessage_insumoNombre}"/>
+                        <p:outputLabel value="#{bundle.EditInsumoLabel_insumoDescripcion}" for="insumoDescripcion" />
+                        <p:inputText id="insumoDescripcion" value="#{insumoController.selected.insumoDescripcion}" title="#{bundle.EditInsumoTitle_insumoDescripcion}" />
+                        <p:outputLabel value="#{bundle.EditInsumoLabel_insumoPrecioCompra}" for="insumoPrecioCompra" />
+                        <p:inputText id="insumoPrecioCompra" value="#{insumoController.selected.insumoPrecioCompra}" title="#{bundle.EditInsumoTitle_insumoPrecioCompra}" required="true" requiredMessage="#{bundle.EditInsumoRequiredMessage_insumoPrecioCompra}"/>
+                        <p:outputLabel value="#{bundle.EditInsumoLabel_insumoPrecioDeVenta}" for="insumoPrecioDeVenta" />
+                        <p:inputText id="insumoPrecioDeVenta" value="#{insumoController.selected.insumoPrecioDeVenta}" title="#{bundle.EditInsumoTitle_insumoPrecioDeVenta}" />
+                        <p:outputLabel value="#{bundle.EditInsumoLabel_insumoCantidad}" for="insumoCantidad" />
+                        <p:inputText id="insumoCantidad" value="#{insumoController.selected.insumoCantidad}" title="#{bundle.EditInsumoTitle_insumoCantidad}" required="true" requiredMessage="#{bundle.EditInsumoRequiredMessage_insumoCantidad}"/>
+                        <p:outputLabel value="#{bundle.EditInsumoLabel_insumoUniMedNombre}" for="insumoUniMedNombre" />
+                        <p:inputText id="insumoUniMedNombre" value="#{insumoController.selected.insumoUniMedNombre}" title="#{bundle.EditInsumoTitle_insumoUniMedNombre}" />
+                        <p:outputLabel value="#{bundle.EditInsumoLabel_proFechaRegistro}" for="proFechaRegistro" />
+                        <p:inputText id="proFechaRegistro" value="#{insumoController.selected.proFechaRegistro}" title="#{bundle.EditInsumoTitle_proFechaRegistro}" required="true" requiredMessage="#{bundle.EditInsumoRequiredMessage_proFechaRegistro}"/>
+                        <p:outputLabel value="#{bundle.EditInsumoLabel_proFechaVencimiento}" for="proFechaVencimiento" />
+                        <p:inputText id="proFechaVencimiento" value="#{insumoController.selected.proFechaVencimiento}" title="#{bundle.EditInsumoTitle_proFechaVencimiento}" required="true" requiredMessage="#{bundle.EditInsumoRequiredMessage_proFechaVencimiento}"/>
+                        <p:outputLabel value="#{bundle.EditInsumoLabel_idProveedor}" for="idProveedor" />
+                        <p:inputText id="idProveedor" value="#{insumoController.selected.idProveedor}" title="#{bundle.EditInsumoTitle_idProveedor}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{insumoController.update}" value="#{bundle.Save}" update="display,:InsumoListForm:datalist,:growl" oncomplete="handleSubmit(args, 'InsumoEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="InsumoEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

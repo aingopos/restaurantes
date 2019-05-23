@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="DatosEmpresaCreateDlg" widgetVar="DatosEmpresaCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateDatosEmpresaTitle}">
+            <h:form id="DatosEmpresaCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{datosEmpresaController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateDatosEmpresaLabel_datEmpId}" for="datEmpId" />
+                        <p:inputText id="datEmpId" value="#{datosEmpresaController.selected.datEmpId}" title="#{bundle.CreateDatosEmpresaTitle_datEmpId}" required="true" requiredMessage="#{bundle.CreateDatosEmpresaRequiredMessage_datEmpId}"/>
+                        <p:outputLabel value="#{bundle.CreateDatosEmpresaLabel_datEmpNombre}" for="datEmpNombre" />
+                        <p:inputText id="datEmpNombre" value="#{datosEmpresaController.selected.datEmpNombre}" title="#{bundle.CreateDatosEmpresaTitle_datEmpNombre}" required="true" requiredMessage="#{bundle.CreateDatosEmpresaRequiredMessage_datEmpNombre}"/>
+                        <p:outputLabel value="#{bundle.CreateDatosEmpresaLabel_datEmpRazonSocial}" for="datEmpRazonSocial" />
+                        <p:inputTextarea rows="4" cols="30" id="datEmpRazonSocial" value="#{datosEmpresaController.selected.datEmpRazonSocial}" title="#{bundle.CreateDatosEmpresaTitle_datEmpRazonSocial}" />
+                        <p:outputLabel value="#{bundle.CreateDatosEmpresaLabel_datEmpTelefono}" for="datEmpTelefono" />
+                        <p:inputText id="datEmpTelefono" value="#{datosEmpresaController.selected.datEmpTelefono}" title="#{bundle.CreateDatosEmpresaTitle_datEmpTelefono}" />
+                        <p:outputLabel value="#{bundle.CreateDatosEmpresaLabel_datEmpNit}" for="datEmpNit" />
+                        <p:inputTextarea rows="4" cols="30" id="datEmpNit" value="#{datosEmpresaController.selected.datEmpNit}" title="#{bundle.CreateDatosEmpresaTitle_datEmpNit}" />
+                        <p:outputLabel value="#{bundle.CreateDatosEmpresaLabel_datEmpDireccion}" for="datEmpDireccion" />
+                        <p:inputTextarea rows="4" cols="30" id="datEmpDireccion" value="#{datosEmpresaController.selected.datEmpDireccion}" title="#{bundle.CreateDatosEmpresaTitle_datEmpDireccion}" />
+                        <p:outputLabel value="#{bundle.CreateDatosEmpresaLabel_datEmpEmail}" for="datEmpEmail" />
+                        <p:inputTextarea rows="4" cols="30" id="datEmpEmail" value="#{datosEmpresaController.selected.datEmpEmail}" title="#{bundle.CreateDatosEmpresaTitle_datEmpEmail}" />
+                        <p:outputLabel value="#{bundle.CreateDatosEmpresaLabel_datEmpPaginaWeb}" for="datEmpPaginaWeb" />
+                        <p:inputTextarea rows="4" cols="30" id="datEmpPaginaWeb" value="#{datosEmpresaController.selected.datEmpPaginaWeb}" title="#{bundle.CreateDatosEmpresaTitle_datEmpPaginaWeb}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{datosEmpresaController.create}" value="#{bundle.Save}" update="display,:DatosEmpresaListForm:datalist,:growl" oncomplete="handleSubmit(args,'DatosEmpresaCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="DatosEmpresaCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

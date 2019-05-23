@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PedidoEditDlg" widgetVar="PedidoEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditPedidoTitle}">
+            <h:form id="PedidoEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{pedidoController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditPedidoLabel_pedCodigo}" for="pedCodigo" />
+                        <p:inputText id="pedCodigo" value="#{pedidoController.selected.pedCodigo}" title="#{bundle.EditPedidoTitle_pedCodigo}" required="true" requiredMessage="#{bundle.EditPedidoRequiredMessage_pedCodigo}"/>
+                        <p:outputLabel value="#{bundle.EditPedidoLabel_meseroId}" for="meseroId" />
+                        <p:inputText id="meseroId" value="#{pedidoController.selected.meseroId}" title="#{bundle.EditPedidoTitle_meseroId}" />
+                        <p:outputLabel value="#{bundle.EditPedidoLabel_pedidoFecha}" for="pedidoFecha" />
+                        <p:inputText id="pedidoFecha" value="#{pedidoController.selected.pedidoFecha}" title="#{bundle.EditPedidoTitle_pedidoFecha}" required="true" requiredMessage="#{bundle.EditPedidoRequiredMessage_pedidoFecha}"/>
+                        <p:outputLabel value="#{bundle.EditPedidoLabel_pedidoHoraInicio}" for="pedidoHoraInicio" />
+                        <p:inputText id="pedidoHoraInicio" value="#{pedidoController.selected.pedidoHoraInicio}" title="#{bundle.EditPedidoTitle_pedidoHoraInicio}" required="true" requiredMessage="#{bundle.EditPedidoRequiredMessage_pedidoHoraInicio}"/>
+                        <p:outputLabel value="#{bundle.EditPedidoLabel_pedidoTotal}" for="pedidoTotal" />
+                        <p:inputText id="pedidoTotal" value="#{pedidoController.selected.pedidoTotal}" title="#{bundle.EditPedidoTitle_pedidoTotal}" />
+                        <p:outputLabel value="#{bundle.EditPedidoLabel_pedidoMesa}" for="pedidoMesa" />
+                        <p:inputText id="pedidoMesa" value="#{pedidoController.selected.pedidoMesa}" title="#{bundle.EditPedidoTitle_pedidoMesa}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{pedidoController.update}" value="#{bundle.Save}" update="display,:PedidoListForm:datalist,:growl" oncomplete="handleSubmit(args, 'PedidoEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="PedidoEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

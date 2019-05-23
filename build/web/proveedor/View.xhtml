@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ProveedorViewDlg" widgetVar="ProveedorViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewProveedorTitle}">
+            <h:form id="ProveedorViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{proveedorController.selected != null}">
+                        <h:outputText value="#{bundle.ViewProveedorLabel_provCedula}"/>
+                        <h:outputText value="#{proveedorController.selected.provCedula}" title="#{bundle.ViewProveedorTitle_provCedula}"/>
+                        <h:outputText value="#{bundle.ViewProveedorLabel_provNombre}"/>
+                        <h:outputText value="#{proveedorController.selected.provNombre}" title="#{bundle.ViewProveedorTitle_provNombre}"/>
+                        <h:outputText value="#{bundle.ViewProveedorLabel_provApellidos}"/>
+                        <h:outputText value="#{proveedorController.selected.provApellidos}" title="#{bundle.ViewProveedorTitle_provApellidos}"/>
+                        <h:outputText value="#{bundle.ViewProveedorLabel_provTelefono}"/>
+                        <h:outputText value="#{proveedorController.selected.provTelefono}" title="#{bundle.ViewProveedorTitle_provTelefono}"/>
+                        <h:outputText value="#{bundle.ViewProveedorLabel_provCelular}"/>
+                        <h:outputText value="#{proveedorController.selected.provCelular}" title="#{bundle.ViewProveedorTitle_provCelular}"/>
+                        <h:outputText value="#{bundle.ViewProveedorLabel_provReputacion}"/>
+                        <h:outputText value="#{proveedorController.selected.provReputacion}" title="#{bundle.ViewProveedorTitle_provReputacion}"/>
+                        <h:outputText value="#{bundle.ViewProveedorLabel_provCorreo}"/>
+                        <h:outputText value="#{proveedorController.selected.provCorreo}" title="#{bundle.ViewProveedorTitle_provCorreo}"/>
+                        <h:outputText value="#{bundle.ViewProveedorLabel_provPaginaWeb}"/>
+                        <h:outputText value="#{proveedorController.selected.provPaginaWeb}" title="#{bundle.ViewProveedorTitle_provPaginaWeb}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="ProveedorViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

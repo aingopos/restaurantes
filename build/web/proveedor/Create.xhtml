@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ProveedorCreateDlg" widgetVar="ProveedorCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateProveedorTitle}">
+            <h:form id="ProveedorCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{proveedorController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateProveedorLabel_provCedula}" for="provCedula" />
+                        <p:inputText id="provCedula" value="#{proveedorController.selected.provCedula}" title="#{bundle.CreateProveedorTitle_provCedula}" required="true" requiredMessage="#{bundle.CreateProveedorRequiredMessage_provCedula}"/>
+                        <p:outputLabel value="#{bundle.CreateProveedorLabel_provNombre}" for="provNombre" />
+                        <p:inputText id="provNombre" value="#{proveedorController.selected.provNombre}" title="#{bundle.CreateProveedorTitle_provNombre}" required="true" requiredMessage="#{bundle.CreateProveedorRequiredMessage_provNombre}"/>
+                        <p:outputLabel value="#{bundle.CreateProveedorLabel_provApellidos}" for="provApellidos" />
+                        <p:inputText id="provApellidos" value="#{proveedorController.selected.provApellidos}" title="#{bundle.CreateProveedorTitle_provApellidos}" required="true" requiredMessage="#{bundle.CreateProveedorRequiredMessage_provApellidos}"/>
+                        <p:outputLabel value="#{bundle.CreateProveedorLabel_provTelefono}" for="provTelefono" />
+                        <p:inputText id="provTelefono" value="#{proveedorController.selected.provTelefono}" title="#{bundle.CreateProveedorTitle_provTelefono}" />
+                        <p:outputLabel value="#{bundle.CreateProveedorLabel_provCelular}" for="provCelular" />
+                        <p:inputText id="provCelular" value="#{proveedorController.selected.provCelular}" title="#{bundle.CreateProveedorTitle_provCelular}" />
+                        <p:outputLabel value="#{bundle.CreateProveedorLabel_provReputacion}" for="provReputacion" />
+                        <p:inputTextarea rows="4" cols="30" id="provReputacion" value="#{proveedorController.selected.provReputacion}" title="#{bundle.CreateProveedorTitle_provReputacion}" />
+                        <p:outputLabel value="#{bundle.CreateProveedorLabel_provCorreo}" for="provCorreo" />
+                        <p:inputText id="provCorreo" value="#{proveedorController.selected.provCorreo}" title="#{bundle.CreateProveedorTitle_provCorreo}" />
+                        <p:outputLabel value="#{bundle.CreateProveedorLabel_provPaginaWeb}" for="provPaginaWeb" />
+                        <p:inputTextarea rows="4" cols="30" id="provPaginaWeb" value="#{proveedorController.selected.provPaginaWeb}" title="#{bundle.CreateProveedorTitle_provPaginaWeb}" required="true" requiredMessage="#{bundle.CreateProveedorRequiredMessage_provPaginaWeb}"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{proveedorController.create}" value="#{bundle.Save}" update="display,:ProveedorListForm:datalist,:growl" oncomplete="handleSubmit(args,'ProveedorCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="ProveedorCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

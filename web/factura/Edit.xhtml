@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="FacturaEditDlg" widgetVar="FacturaEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditFacturaTitle}">
+            <h:form id="FacturaEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{facturaController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditFacturaLabel_facCodigo}" for="facCodigo" />
+                        <p:inputText id="facCodigo" value="#{facturaController.selected.facCodigo}" title="#{bundle.EditFacturaTitle_facCodigo}" required="true" requiredMessage="#{bundle.EditFacturaRequiredMessage_facCodigo}"/>
+                        <p:outputLabel value="#{bundle.EditFacturaLabel_facFecha}" for="facFecha" />
+                        <p:inputText id="facFecha" value="#{facturaController.selected.facFecha}" title="#{bundle.EditFacturaTitle_facFecha}" />
+                        <p:outputLabel value="#{bundle.EditFacturaLabel_facFormaPago}" for="facFormaPago" />
+                        <p:inputText id="facFormaPago" value="#{facturaController.selected.facFormaPago}" title="#{bundle.EditFacturaTitle_facFormaPago}" />
+                        <p:outputLabel value="#{bundle.EditFacturaLabel_empleadoId}" for="empleadoId" />
+                        <p:inputText id="empleadoId" value="#{facturaController.selected.empleadoId}" title="#{bundle.EditFacturaTitle_empleadoId}" required="true" requiredMessage="#{bundle.EditFacturaRequiredMessage_empleadoId}"/>
+                        <p:outputLabel value="#{bundle.EditFacturaLabel_total}" for="total" />
+                        <p:inputText id="total" value="#{facturaController.selected.total}" title="#{bundle.EditFacturaTitle_total}" />
+                        <p:outputLabel value="#{bundle.EditFacturaLabel_tax}" for="tax" />
+                        <p:inputText id="tax" value="#{facturaController.selected.tax}" title="#{bundle.EditFacturaTitle_tax}" />
+                        <p:outputLabel value="#{bundle.EditFacturaLabel_granTotal}" for="granTotal" />
+                        <p:inputText id="granTotal" value="#{facturaController.selected.granTotal}" title="#{bundle.EditFacturaTitle_granTotal}" />
+                        <p:outputLabel value="#{bundle.EditFacturaLabel_mesaid}" for="mesaid" />
+                        <p:inputText id="mesaid" value="#{facturaController.selected.mesaid}" title="#{bundle.EditFacturaTitle_mesaid}" />
+                        <p:outputLabel value="#{bundle.EditFacturaLabel_pedidoId}" for="pedidoId" />
+                        <p:inputText id="pedidoId" value="#{facturaController.selected.pedidoId}" title="#{bundle.EditFacturaTitle_pedidoId}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{facturaController.update}" value="#{bundle.Save}" update="display,:FacturaListForm:datalist,:growl" oncomplete="handleSubmit(args, 'FacturaEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="FacturaEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

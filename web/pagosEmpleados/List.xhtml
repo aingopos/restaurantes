@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+
+
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListPagosEmpleadosTitle}"></h:outputText>
+        </ui:define>
+
+        <ui:define name="body">
+            <h:form id="PagosEmpleadosListForm">
+                <p:panel header="#{bundle.ListPagosEmpleadosTitle}">
+                    <p:dataTable id="datalist" value="#{pagosEmpleadosController.items}" var="item"
+                                 selectionMode="single" selection="#{pagosEmpleadosController.selected}"
+                                 paginator="true"
+                                 rowKey="#{item.idpagosEmpleados}"
+                                 rows="10"
+                                 rowsPerPageTemplate="10,20,30,40,50"
+                                 >
+
+                        <p:ajax event="rowSelect"   update="createButton viewButton editButton deleteButton"/>
+                        <p:ajax event="rowUnselect" update="createButton viewButton editButton deleteButton"/>
+
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_idpagosEmpleados}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idpagosEmpleados}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_empleadoId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.empleadoId}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_pagoValorTotal}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.pagoValorTotal}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_fechaDePago}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fechaDePago}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_horasTrabajadas}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.horasTrabajadas}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_horasExtra}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.horasExtra}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_horasDominicales}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.horasDominicales}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_horasExtraDominicales}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.horasExtraDominicales}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_horasNocturnas}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.horasNocturnas}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_horasExtraNocturnas}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.horasExtraNocturnas}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_horasExtraDomiNoc}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.horasExtraDomiNoc}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_subsidioTransporte}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subsidioTransporte}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPagosEmpleadosTitle_subsidioSalud}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.subsidioSalud}"/>
+                        </p:column>
+                        <f:facet name="footer">
+                            <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{pagosEmpleadosController.prepareCreate}" update=":PagosEmpleadosCreateForm" oncomplete="PF('PagosEmpleadosCreateDialog').show()"/>
+                            <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":PagosEmpleadosViewForm" oncomplete="PF('PagosEmpleadosViewDialog').show()" disabled="#{empty pagosEmpleadosController.selected}"/>
+                            <p:commandButton id="editButton"   icon="ui-icon-pencil" value="#{bundle.Edit}" update=":PagosEmpleadosEditForm" oncomplete="PF('PagosEmpleadosEditDialog').show()" disabled="#{empty pagosEmpleadosController.selected}"/>
+                            <p:commandButton id="deleteButton" icon="ui-icon-trash"  value="#{bundle.Delete}" actionListener="#{pagosEmpleadosController.destroy}" update=":growl,datalist" disabled="#{empty pagosEmpleadosController.selected}"/>
+                        </f:facet>
+                    </p:dataTable>
+                </p:panel>
+            </h:form>
+
+            <ui:include src="Create.xhtml"/>
+            <ui:include src="Edit.xhtml"/>
+            <ui:include src="View.xhtml"/>
+        </ui:define>
+    </ui:composition>
+
+</html>

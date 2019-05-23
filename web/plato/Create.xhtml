@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PlatoCreateDlg" widgetVar="PlatoCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreatePlatoTitle}">
+            <h:form id="PlatoCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{platoController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreatePlatoLabel_plaNombre}" for="plaNombre" />
+                        <p:inputText id="plaNombre" value="#{platoController.selected.plaNombre}" title="#{bundle.CreatePlatoTitle_plaNombre}" required="true" requiredMessage="#{bundle.CreatePlatoRequiredMessage_plaNombre}"/>
+                        <p:outputLabel value="#{bundle.CreatePlatoLabel_plaDescripcion}" for="plaDescripcion" />
+                        <p:inputTextarea rows="4" cols="30" id="plaDescripcion" value="#{platoController.selected.plaDescripcion}" title="#{bundle.CreatePlatoTitle_plaDescripcion}" required="true" requiredMessage="#{bundle.CreatePlatoRequiredMessage_plaDescripcion}"/>
+                        <p:outputLabel value="#{bundle.CreatePlatoLabel_plaPrecioVenta}" for="plaPrecioVenta" />
+                        <p:inputText id="plaPrecioVenta" value="#{platoController.selected.plaPrecioVenta}" title="#{bundle.CreatePlatoTitle_plaPrecioVenta}" required="true" requiredMessage="#{bundle.CreatePlatoRequiredMessage_plaPrecioVenta}"/>
+                        <p:outputLabel value="#{bundle.CreatePlatoLabel_plaDescuento}" for="plaDescuento" />
+                        <p:inputText id="plaDescuento" value="#{platoController.selected.plaDescuento}" title="#{bundle.CreatePlatoTitle_plaDescuento}" required="true" requiredMessage="#{bundle.CreatePlatoRequiredMessage_plaDescuento}"/>
+                        <p:outputLabel value="#{bundle.CreatePlatoLabel_plaTipo}" for="plaTipo" />
+                        <p:inputText id="plaTipo" value="#{platoController.selected.plaTipo}" title="#{bundle.CreatePlatoTitle_plaTipo}" />
+                        <p:outputLabel value="#{bundle.CreatePlatoLabel_plaCantidadPersonas}" for="plaCantidadPersonas" />
+                        <p:inputText id="plaCantidadPersonas" value="#{platoController.selected.plaCantidadPersonas}" title="#{bundle.CreatePlatoTitle_plaCantidadPersonas}" required="true" requiredMessage="#{bundle.CreatePlatoRequiredMessage_plaCantidadPersonas}"/>
+                        <p:outputLabel value="#{bundle.CreatePlatoLabel_plaFoto}" for="plaFoto" />
+                        <p:inputTextarea rows="4" cols="30" id="plaFoto" value="#{platoController.selected.plaFoto}" title="#{bundle.CreatePlatoTitle_plaFoto}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{platoController.create}" value="#{bundle.Save}" update="display,:PlatoListForm:datalist,:growl" oncomplete="handleSubmit(args,'PlatoCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="PlatoCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

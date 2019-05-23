@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PagosEmpleadosViewDlg" widgetVar="PagosEmpleadosViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewPagosEmpleadosTitle}">
+            <h:form id="PagosEmpleadosViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{pagosEmpleadosController.selected != null}">
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_idpagosEmpleados}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.idpagosEmpleados}" title="#{bundle.ViewPagosEmpleadosTitle_idpagosEmpleados}"/>
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_empleadoId}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.empleadoId}" title="#{bundle.ViewPagosEmpleadosTitle_empleadoId}"/>
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_pagoValorTotal}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.pagoValorTotal}" title="#{bundle.ViewPagosEmpleadosTitle_pagoValorTotal}"/>
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_fechaDePago}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.fechaDePago}" title="#{bundle.ViewPagosEmpleadosTitle_fechaDePago}"/>
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_horasTrabajadas}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.horasTrabajadas}" title="#{bundle.ViewPagosEmpleadosTitle_horasTrabajadas}"/>
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_horasExtra}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.horasExtra}" title="#{bundle.ViewPagosEmpleadosTitle_horasExtra}"/>
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_horasDominicales}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.horasDominicales}" title="#{bundle.ViewPagosEmpleadosTitle_horasDominicales}"/>
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_horasExtraDominicales}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.horasExtraDominicales}" title="#{bundle.ViewPagosEmpleadosTitle_horasExtraDominicales}"/>
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_horasNocturnas}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.horasNocturnas}" title="#{bundle.ViewPagosEmpleadosTitle_horasNocturnas}"/>
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_horasExtraNocturnas}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.horasExtraNocturnas}" title="#{bundle.ViewPagosEmpleadosTitle_horasExtraNocturnas}"/>
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_horasExtraDomiNoc}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.horasExtraDomiNoc}" title="#{bundle.ViewPagosEmpleadosTitle_horasExtraDomiNoc}"/>
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_subsidioTransporte}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.subsidioTransporte}" title="#{bundle.ViewPagosEmpleadosTitle_subsidioTransporte}"/>
+                        <h:outputText value="#{bundle.ViewPagosEmpleadosLabel_subsidioSalud}"/>
+                        <h:outputText value="#{pagosEmpleadosController.selected.subsidioSalud}" title="#{bundle.ViewPagosEmpleadosTitle_subsidioSalud}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="PagosEmpleadosViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

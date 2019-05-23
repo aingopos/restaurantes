@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="DetallePedidoEditDlg" widgetVar="DetallePedidoEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditDetallePedidoTitle}">
+            <h:form id="DetallePedidoEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{detallePedidoController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditDetallePedidoLabel_id}" for="id" />
+                        <p:inputText id="id" value="#{detallePedidoController.selected.id}" title="#{bundle.EditDetallePedidoTitle_id}" required="true" requiredMessage="#{bundle.EditDetallePedidoRequiredMessage_id}"/>
+                        <p:outputLabel value="#{bundle.EditDetallePedidoLabel_idPlato}" for="idPlato" />
+                        <p:inputText id="idPlato" value="#{detallePedidoController.selected.idPlato}" title="#{bundle.EditDetallePedidoTitle_idPlato}" />
+                        <p:outputLabel value="#{bundle.EditDetallePedidoLabel_idPedido}" for="idPedido" />
+                        <p:inputText id="idPedido" value="#{detallePedidoController.selected.idPedido}" title="#{bundle.EditDetallePedidoTitle_idPedido}" />
+                        <p:outputLabel value="#{bundle.EditDetallePedidoLabel_precioProducto}" for="precioProducto" />
+                        <p:inputText id="precioProducto" value="#{detallePedidoController.selected.precioProducto}" title="#{bundle.EditDetallePedidoTitle_precioProducto}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{detallePedidoController.update}" value="#{bundle.Save}" update="display,:DetallePedidoListForm:datalist,:growl" oncomplete="handleSubmit(args, 'DetallePedidoEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="DetallePedidoEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

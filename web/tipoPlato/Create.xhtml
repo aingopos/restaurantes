@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="TipoPlatoCreateDlg" widgetVar="TipoPlatoCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateTipoPlatoTitle}">
+            <h:form id="TipoPlatoCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{tipoPlatoController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateTipoPlatoLabel_idTipoPlato}" for="idTipoPlato" />
+                        <p:inputText id="idTipoPlato" value="#{tipoPlatoController.selected.idTipoPlato}" title="#{bundle.CreateTipoPlatoTitle_idTipoPlato}" required="true" requiredMessage="#{bundle.CreateTipoPlatoRequiredMessage_idTipoPlato}"/>
+                        <p:outputLabel value="#{bundle.CreateTipoPlatoLabel_tipoPlatoDescripcion}" for="tipoPlatoDescripcion" />
+                        <p:inputText id="tipoPlatoDescripcion" value="#{tipoPlatoController.selected.tipoPlatoDescripcion}" title="#{bundle.CreateTipoPlatoTitle_tipoPlatoDescripcion}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{tipoPlatoController.create}" value="#{bundle.Save}" update="display,:TipoPlatoListForm:datalist,:growl" oncomplete="handleSubmit(args,'TipoPlatoCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="TipoPlatoCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

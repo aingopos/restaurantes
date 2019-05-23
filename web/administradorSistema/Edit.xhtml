@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="AdministradorSistemaEditDlg" widgetVar="AdministradorSistemaEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditAdministradorSistemaTitle}">
+            <h:form id="AdministradorSistemaEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{administradorSistemaController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditAdministradorSistemaLabel_idAdmin}" for="idAdmin" />
+                        <p:inputText id="idAdmin" value="#{administradorSistemaController.selected.idAdmin}" title="#{bundle.EditAdministradorSistemaTitle_idAdmin}" required="true" requiredMessage="#{bundle.EditAdministradorSistemaRequiredMessage_idAdmin}"/>
+                        <p:outputLabel value="#{bundle.EditAdministradorSistemaLabel_admCorreo}" for="admCorreo" />
+                        <p:inputText id="admCorreo" value="#{administradorSistemaController.selected.admCorreo}" title="#{bundle.EditAdministradorSistemaTitle_admCorreo}" required="true" requiredMessage="#{bundle.EditAdministradorSistemaRequiredMessage_admCorreo}"/>
+                        <p:outputLabel value="#{bundle.EditAdministradorSistemaLabel_admClave}" for="admClave" />
+                        <p:inputText id="admClave" value="#{administradorSistemaController.selected.admClave}" title="#{bundle.EditAdministradorSistemaTitle_admClave}" required="true" requiredMessage="#{bundle.EditAdministradorSistemaRequiredMessage_admClave}"/>
+                        <p:outputLabel value="#{bundle.EditAdministradorSistemaLabel_tipoAdmin}" for="tipoAdmin" />
+                        <p:inputText id="tipoAdmin" value="#{administradorSistemaController.selected.tipoAdmin}" title="#{bundle.EditAdministradorSistemaTitle_tipoAdmin}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{administradorSistemaController.update}" value="#{bundle.Save}" update="display,:AdministradorSistemaListForm:datalist,:growl" oncomplete="handleSubmit(args, 'AdministradorSistemaEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="AdministradorSistemaEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

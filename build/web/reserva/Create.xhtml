@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ReservaCreateDlg" widgetVar="ReservaCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateReservaTitle}">
+            <h:form id="ReservaCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{reservaController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateReservaLabel_detResFecha}" for="detResFecha" />
+                        <p:calendar id="detResFecha" pattern="MM/dd/yyyy" value="#{reservaController.selected.detResFecha}" title="#{bundle.EditReservaTitle_detResFecha}" required="true" requiredMessage="#{bundle.EditReservaRequiredMessage_detResFecha}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreateReservaLabel_detResHoraInicio}" for="detResHoraInicio" />
+                        <p:calendar id="detResHoraInicio" pattern="HH:mm:ss" value="#{reservaController.selected.detResHoraInicio}" title="#{bundle.EditReservaTitle_detResHoraInicio}" required="true" requiredMessage="#{bundle.EditReservaRequiredMessage_detResHoraInicio}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreateReservaLabel_detResHoraFin}" for="detResHoraFin" />
+                        <p:calendar id="detResHoraFin" pattern="MM/dd/yyyy HH:mm:ss" value="#{reservaController.selected.detResHoraFin}" title="#{bundle.EditReservaTitle_detResHoraFin}" required="true" requiredMessage="#{bundle.EditReservaRequiredMessage_detResHoraFin}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreateReservaLabel_resCodigo}" for="resCodigo" />
+                        <p:inputText id="resCodigo" value="#{reservaController.selected.resCodigo}" title="#{bundle.CreateReservaTitle_resCodigo}" required="true" requiredMessage="#{bundle.CreateReservaRequiredMessage_resCodigo}"/>
+                        <p:outputLabel value="#{bundle.CreateReservaLabel_reservaIdCliente}" for="reservaIdCliente" />
+                        <p:inputText id="reservaIdCliente" value="#{reservaController.selected.reservaIdCliente}" title="#{bundle.CreateReservaTitle_reservaIdCliente}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{reservaController.create}" value="#{bundle.Save}" update="display,:ReservaListForm:datalist,:growl" oncomplete="handleSubmit(args,'ReservaCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="ReservaCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PagosEmpleadosCreateDlg" widgetVar="PagosEmpleadosCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreatePagosEmpleadosTitle}">
+            <h:form id="PagosEmpleadosCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{pagosEmpleadosController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_idpagosEmpleados}" for="idpagosEmpleados" />
+                        <p:inputText id="idpagosEmpleados" value="#{pagosEmpleadosController.selected.idpagosEmpleados}" title="#{bundle.CreatePagosEmpleadosTitle_idpagosEmpleados}" required="true" requiredMessage="#{bundle.CreatePagosEmpleadosRequiredMessage_idpagosEmpleados}"/>
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_empleadoId}" for="empleadoId" />
+                        <p:inputText id="empleadoId" value="#{pagosEmpleadosController.selected.empleadoId}" title="#{bundle.CreatePagosEmpleadosTitle_empleadoId}" />
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_pagoValorTotal}" for="pagoValorTotal" />
+                        <p:inputText id="pagoValorTotal" value="#{pagosEmpleadosController.selected.pagoValorTotal}" title="#{bundle.CreatePagosEmpleadosTitle_pagoValorTotal}" />
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_fechaDePago}" for="fechaDePago" />
+                        <p:inputText id="fechaDePago" value="#{pagosEmpleadosController.selected.fechaDePago}" title="#{bundle.CreatePagosEmpleadosTitle_fechaDePago}" />
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_horasTrabajadas}" for="horasTrabajadas" />
+                        <p:inputText id="horasTrabajadas" value="#{pagosEmpleadosController.selected.horasTrabajadas}" title="#{bundle.CreatePagosEmpleadosTitle_horasTrabajadas}" />
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_horasExtra}" for="horasExtra" />
+                        <p:inputText id="horasExtra" value="#{pagosEmpleadosController.selected.horasExtra}" title="#{bundle.CreatePagosEmpleadosTitle_horasExtra}" />
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_horasDominicales}" for="horasDominicales" />
+                        <p:inputText id="horasDominicales" value="#{pagosEmpleadosController.selected.horasDominicales}" title="#{bundle.CreatePagosEmpleadosTitle_horasDominicales}" />
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_horasExtraDominicales}" for="horasExtraDominicales" />
+                        <p:inputText id="horasExtraDominicales" value="#{pagosEmpleadosController.selected.horasExtraDominicales}" title="#{bundle.CreatePagosEmpleadosTitle_horasExtraDominicales}" />
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_horasNocturnas}" for="horasNocturnas" />
+                        <p:inputText id="horasNocturnas" value="#{pagosEmpleadosController.selected.horasNocturnas}" title="#{bundle.CreatePagosEmpleadosTitle_horasNocturnas}" />
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_horasExtraNocturnas}" for="horasExtraNocturnas" />
+                        <p:inputText id="horasExtraNocturnas" value="#{pagosEmpleadosController.selected.horasExtraNocturnas}" title="#{bundle.CreatePagosEmpleadosTitle_horasExtraNocturnas}" />
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_horasExtraDomiNoc}" for="horasExtraDomiNoc" />
+                        <p:inputText id="horasExtraDomiNoc" value="#{pagosEmpleadosController.selected.horasExtraDomiNoc}" title="#{bundle.CreatePagosEmpleadosTitle_horasExtraDomiNoc}" />
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_subsidioTransporte}" for="subsidioTransporte" />
+                        <p:inputText id="subsidioTransporte" value="#{pagosEmpleadosController.selected.subsidioTransporte}" title="#{bundle.CreatePagosEmpleadosTitle_subsidioTransporte}" />
+                        <p:outputLabel value="#{bundle.CreatePagosEmpleadosLabel_subsidioSalud}" for="subsidioSalud" />
+                        <p:inputText id="subsidioSalud" value="#{pagosEmpleadosController.selected.subsidioSalud}" title="#{bundle.CreatePagosEmpleadosTitle_subsidioSalud}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{pagosEmpleadosController.create}" value="#{bundle.Save}" update="display,:PagosEmpleadosListForm:datalist,:growl" oncomplete="handleSubmit(args,'PagosEmpleadosCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="PagosEmpleadosCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

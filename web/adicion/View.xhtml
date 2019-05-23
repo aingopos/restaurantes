@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="AdicionViewDlg" widgetVar="AdicionViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewAdicionTitle}">
+            <h:form id="AdicionViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{adicionController.selected != null}">
+                        <h:outputText value="#{bundle.ViewAdicionLabel_idadicion}"/>
+                        <h:outputText value="#{adicionController.selected.idadicion}" title="#{bundle.ViewAdicionTitle_idadicion}"/>
+                        <h:outputText value="#{bundle.ViewAdicionLabel_adicionNombre}"/>
+                        <h:outputText value="#{adicionController.selected.adicionNombre}" title="#{bundle.ViewAdicionTitle_adicionNombre}"/>
+                        <h:outputText value="#{bundle.ViewAdicionLabel_adicionDescripcion}"/>
+                        <h:outputText value="#{adicionController.selected.adicionDescripcion}" title="#{bundle.ViewAdicionTitle_adicionDescripcion}"/>
+                        <h:outputText value="#{bundle.ViewAdicionLabel_adicionPrecio}"/>
+                        <h:outputText value="#{adicionController.selected.adicionPrecio}" title="#{bundle.ViewAdicionTitle_adicionPrecio}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="AdicionViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
