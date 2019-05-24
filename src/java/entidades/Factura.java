@@ -52,7 +52,7 @@ public class Factura implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 45)
-    @Column(name = "empleado id")
+    @Column(name = "empleado_id")
     private String empleadoId;
     @Size(max = 45)
     @Column(name = "total")
