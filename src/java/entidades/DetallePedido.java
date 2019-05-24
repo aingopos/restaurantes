@@ -47,7 +47,8 @@ public class DetallePedido implements Serializable {
     @Size(max = 45)
     @Column(name = "precioProducto")
     private String precioProducto;
-
+    
+    
     public DetallePedido() {
     }
 
