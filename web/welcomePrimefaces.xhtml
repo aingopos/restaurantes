@@ -17,18 +17,18 @@
 
             <p:layout fullPage="true">
 
-                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                <p:layoutUnit position="north"  resizable="true" closable="true" collapsible="true">
                     <ui:include src="MenuBar.xhtml"></ui:include>
                 </p:layoutUnit>
 
-                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                <p:layoutUnit position="south"  closable="true" collapsible="true">
                     Footer
                 </p:layoutUnit>
 
-                <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
+                <p:layoutUnit position="west"  header="Left" collapsible="true">
                     <p:menu>
-                        <p:submenu label="Resources">
-                            <p:menuitem value="Facturas" outcome="/factura/List" />
+                        <p:submenu label="Resources">                            
+                            <p:menuitem value="Facturas" url="/factura/List"/>
                             <p:menuitem value="Documentation" url="http://www.primefaces.org/documentation.html" />
                             <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
                             <p:menuitem value="Themes" url="http://www.primefaces.org/themes.html" />
@@ -39,7 +39,37 @@
                 </p:layoutUnit>
 
                 <p:layoutUnit position="center">
-                    Welcome to PrimeFaces
+                    <h:form id="DetallePedidoListForm">
+                        <p:panel header="#{bundle.ListDetallePedidoTitle}">
+                            <p:dataTable id="datalist" value="#{detallePedido.getPlatosDeUnPedido()}" var="item"
+                                         paginator="true"
+                                         rows="10"
+                                         rowsPerPageTemplate="10,20,30,40,50"
+                                         >
+                                <p:column>
+                                    <f:facet name="header">
+                                        <h:outputText value="#{bundle.ListDetallePedidoTitle_idPlato}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.nombre}"/>
+                                </p:column>
+                                <p:column>
+                                    <f:facet name="header">
+                                        <h:outputText value="#{bundle.ListDetallePedidoTitle_precioProducto}"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.precio}"/>
+                                </p:column>
+                                <p:column>
+                                    <f:facet name="header">
+                                        <h:outputText value="total de veces vendido"/>
+                                    </f:facet>
+                                    <h:outputText value="#{item.cantidadApariciones}"/>
+                                </p:column>
+                                <f:facet name="footer">
+                                </f:facet>
+                            </p:dataTable>
+                        </p:panel>
+                    </h:form>
+                    <p:chart type="bar" model="#{chartView.combinedModel}" style="height:300px" />
                 </p:layoutUnit>
 
             </p:layout>

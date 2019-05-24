@@ -3,14 +3,138 @@
   <component name="ChangeListManager">
     <list default="true" id="00d9923c-4291-4bf3-bf9a-28043678d9c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Adicion_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Adicion_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/AdministradorSistema_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/AdministradorSistema_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Cliente_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Cliente_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/DatosEmpresa_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/DatosEmpresa_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/DetalleFacturaPK_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/DetalleFacturaPK_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/DetalleFactura_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/DetalleFactura_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/DetallePedido_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/DetallePedido_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/DetallePlato_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/DetallePlato_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Empleado_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Empleado_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Factura_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Factura_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Insumo_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Insumo_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Mesa_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Mesa_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/PagosEmpleados_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/PagosEmpleados_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Pedido_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Pedido_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Plato_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Plato_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Proveedor_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Proveedor_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Reserva_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/Reserva_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/TipoAdmin_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/TipoAdmin_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/TipoEmpleado_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/TipoEmpleado_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/TipoPlato_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/TipoPlato_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/UnidadMedida_.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated-sources/ap-source-output/entidades/UnidadMedida_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/.netbeans_update_resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/DAO/Querys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Adicion.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Adicion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Adicion.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/AdicionFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/AdicionFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Adicion_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Adicion_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/AdministradorSistema.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/AdministradorSistema.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/AdministradorSistema.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/AdministradorSistemaFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/AdministradorSistemaFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/AdministradorSistema_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/AdministradorSistema_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Cliente.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/ClienteFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/ClienteFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Cliente_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Cliente_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DatosEmpresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DatosEmpresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DatosEmpresa.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DatosEmpresaFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DatosEmpresaFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DatosEmpresa_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DatosEmpresa_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetalleFactura.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetalleFactura.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetalleFactura.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetalleFacturaFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetalleFacturaFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetalleFacturaPK.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetalleFacturaPK.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetalleFacturaPK.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetalleFacturaPK_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetalleFacturaPK_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetalleFactura_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetalleFactura_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePedido.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePedido.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePedidoFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePedidoFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePedido_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePedido_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePlato.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePlato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePlato.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePlatoFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePlatoFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePlato_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/DetallePlato_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Empleado.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Empleado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Empleado.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/EmpleadoFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/EmpleadoFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Empleado_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Empleado_.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Factura.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Factura.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Factura.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/FacturaFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/FacturaFacade.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Factura_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Factura_.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/detallePedido/List_1.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/detallePedido/List_1.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/entidades/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/entidades/Factura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/detallePedido/List_1.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/detallePedido/List_1.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Insumo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Insumo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Insumo.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/InsumoFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/InsumoFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Insumo_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Insumo_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Mesa.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Mesa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Mesa.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/MesaFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/MesaFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Mesa_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Mesa_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/PagosEmpleados.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/PagosEmpleados.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/PagosEmpleados.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/PagosEmpleadosFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/PagosEmpleadosFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/PagosEmpleados_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/PagosEmpleados_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Pedido.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Pedido.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/PedidoFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/PedidoFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Pedido_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Pedido_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Plato.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Plato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/PlatoFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/PlatoFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Plato_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Plato_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Proveedor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Proveedor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Proveedor.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/ProveedorFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/ProveedorFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Proveedor_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Proveedor_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Reserva.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Reserva.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Reserva.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/ReservaFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/ReservaFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Reserva_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/Reserva_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoAdmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoAdmin.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoAdminFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoAdminFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoAdmin_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoAdmin_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoEmpleado.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoEmpleado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoEmpleado.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoEmpleadoFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoEmpleadoFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoEmpleado_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoEmpleado_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoPlato.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoPlato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoPlato.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoPlatoFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoPlatoFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoPlato_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/TipoPlato_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/UnidadMedida.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/UnidadMedida.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/UnidadMedida.rapt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/UnidadMedidaFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/UnidadMedidaFacade.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/UnidadMedida_.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entidades/UnidadMedida_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/AdicionController$AdicionControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/AdicionController$AdicionControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/AdministradorSistemaController$AdministradorSistemaControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/AdministradorSistemaController$AdministradorSistemaControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/ClienteController$ClienteControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/ClienteController$ClienteControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/DatosEmpresaController$DatosEmpresaControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/DatosEmpresaController$DatosEmpresaControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/DetalleFacturaController$DetalleFacturaControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/DetalleFacturaController$DetalleFacturaControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/DetallePedidoController$DetallePedidoControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/DetallePedidoController$DetallePedidoControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/DetallePlatoController$DetallePlatoControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/DetallePlatoController$DetallePlatoControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/DetallesPedidoPersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/DetallesPedidoPersistence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/EmpleadoController$EmpleadoControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/EmpleadoController$EmpleadoControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/FacturaController$FacturaControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/FacturaController$FacturaControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/InsumoController$InsumoControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/InsumoController$InsumoControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/MesaController$MesaControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/MesaController$MesaControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/PagosEmpleadosController$PagosEmpleadosControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/PagosEmpleadosController$PagosEmpleadosControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/PedidoController$PedidoControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/PedidoController$PedidoControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/PlatoController$PlatoControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/PlatoController$PlatoControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/ProveedorController$ProveedorControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/ProveedorController$ProveedorControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/Querys.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/ReservaController$ReservaControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/ReservaController$ReservaControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/TipoAdminController$TipoAdminControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/TipoAdminController$TipoAdminControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/TipoEmpleadoController$TipoEmpleadoControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/TipoEmpleadoController$TipoEmpleadoControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/TipoPlatoController$TipoPlatoControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/TipoPlatoController$TipoPlatoControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/UnidadMedidaController$UnidadMedidaControllerConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/persistencia/UnidadMedidaController$UnidadMedidaControllerConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/resouces.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/gfv3ee6.dpf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/welcomePrimefaces.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/welcomePrimefaces.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/persistencia/Querys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/persistencia/Querys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/welcomePrimefaces.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/welcomePrimefaces.xhtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,8 +172,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="789" />
-    <option name="y" value="94" />
+    <option name="x" value="163" />
+    <option name="y" value="96" />
     <option name="width" value="1602" />
     <option name="height" value="1243" />
   </component>
@@ -70,18 +194,7 @@
             <path>
               <item name="aingo-restaurantes-version-base-funcionando" type="b2602c69:ProjectViewProjectNode" />
               <item name="aingo-restaurantes-version-base-funcionando" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aingo-restaurantes-version-base-funcionando" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aingo-restaurantes-version-base-funcionando" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aingo-restaurantes-version-base-funcionando" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aingo-restaurantes-version-base-funcionando" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="detallePlato" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -122,11 +235,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558659282461</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="filtro por plato mas vendido">
+      <created>1558660796231</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558660796231</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="789" y="94" width="1602" height="1243" extended-state="0" />
+    <frame x="163" y="96" width="1602" height="1243" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -134,11 +254,12 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3292789" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3292789" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
