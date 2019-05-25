@@ -75,7 +75,7 @@ public class InsumoJpaController implements Serializable {
             }
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                Integer id = insumo.getIdInsumo();
+                String id = insumo.getIdInsumo();
                 if (findInsumo(id) == null) {
                     throw new NonexistentEntityException("The insumo with id " + id + " no longer exists.");
                 }
@@ -140,7 +140,7 @@ public class InsumoJpaController implements Serializable {
         }
     }
 
-    public Insumo findInsumo(Integer id) {
+    public Insumo findInsumo(String id) {
         EntityManager em = getEntityManager();
         try {
             return em.find(Insumo.class, id);

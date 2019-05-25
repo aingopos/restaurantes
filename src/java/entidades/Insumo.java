@@ -42,7 +42,7 @@ public class Insumo implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "idInsumo")
-    private Integer idInsumo;
+    private String idInsumo;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 45)
@@ -81,11 +81,11 @@ public class Insumo implements Serializable {
     public Insumo() {
     }
 
-    public Insumo(Integer idInsumo) {
+    public Insumo(String idInsumo) {
         this.idInsumo = idInsumo;
     }
 
-    public Insumo(Integer idInsumo, String insumoNombre, double insumoPrecioCompra, double insumoCantidad, String proFechaRegistro, String proFechaVencimiento) {
+    public Insumo(String idInsumo, String insumoNombre, double insumoPrecioCompra, double insumoCantidad, String proFechaRegistro, String proFechaVencimiento) {
         this.idInsumo = idInsumo;
         this.insumoNombre = insumoNombre;
         this.insumoPrecioCompra = insumoPrecioCompra;
@@ -94,11 +94,11 @@ public class Insumo implements Serializable {
         this.proFechaVencimiento = proFechaVencimiento;
     }
 
-    public Integer getIdInsumo() {
+    public String getIdInsumo() {
         return idInsumo;
     }
 
-    public void setIdInsumo(Integer idInsumo) {
+    public void setIdInsumo(String idInsumo) {
         this.idInsumo = idInsumo;
     }
 

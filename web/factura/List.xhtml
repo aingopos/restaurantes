@@ -10,12 +10,12 @@
 
 
         <ui:define name="title">
-            <h:outputText value="#{bundle.ListFacturaTitle}"></h:outputText>
+            <h:outputText value="Facturas"></h:outputText>
         </ui:define>
 
         <ui:define name="body">
             <h:form id="FacturaListForm">
-                <p:panel header="#{bundle.ListFacturaTitle}">
+                <p:panel header="Lista de Facturas Realizadas">
                     <p:dataTable id="datalist" value="#{facturaController.items}" var="item"
                                  selectionMode="single" selection="#{facturaController.selected}"
                                  paginator="true"
@@ -29,58 +29,53 @@
 
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListFacturaTitle_facCodigo}"/>
+                                <h:outputText value="Codigo"/>
                             </f:facet>
                             <h:outputText value="#{item.facCodigo}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.facFecha}">
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListFacturaTitle_facFecha}"/>
+                                <h:outputText value="Fecha" />
                             </f:facet>
                             <h:outputText value="#{item.facFecha}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListFacturaTitle_facFormaPago}"/>
+                                <h:outputText value="Forma de pago"/>
                             </f:facet>
                             <h:outputText value="#{item.facFormaPago}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListFacturaTitle_empleadoId}"/>
+                                <h:outputText value="Empleado"/>
                             </f:facet>
                             <h:outputText value="#{item.empleadoId}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListFacturaTitle_total}"/>
+                                <h:outputText value="Valor total de la Factura"/>
                             </f:facet>
                             <h:outputText value="#{item.total}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListFacturaTitle_tax}"/>
+                                <h:outputText value="Impuestos"/>
                             </f:facet>
                             <h:outputText value="#{item.tax}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListFacturaTitle_granTotal}"/>
+                                <h:outputText value="Valor total"/>
                             </f:facet>
                             <h:outputText value="#{item.granTotal}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListFacturaTitle_mesaid}"/>
+                                <h:outputText value="Mesa"/>
                             </f:facet>
                             <h:outputText value="#{item.mesaid}"/>
                         </p:column>
-                        <p:column>
-                            <f:facet name="header">
-                                <h:outputText value="#{bundle.ListFacturaTitle_pedidoId}"/>
-                            </f:facet>
-                            <h:outputText value="#{item.pedidoId}"/>
-                        </p:column>
+
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{facturaController.prepareCreate}" update=":FacturaCreateForm" oncomplete="PF('FacturaCreateDialog').show()"/>
                             <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":FacturaViewForm" oncomplete="PF('FacturaViewDialog').show()" disabled="#{empty facturaController.selected}"/>

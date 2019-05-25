@@ -149,7 +149,7 @@ public class AdicionController implements Serializable {
             }
             if (object instanceof Adicion) {
                 Adicion o = (Adicion) object;
-                return getStringKey(o.getIdadicion());
+                return o.getIdadicion();
             } else {
                 Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "object {0} is of type {1}; expected type: {2}", new Object[]{object, object.getClass().getName(), Adicion.class.getName()});
                 return null;

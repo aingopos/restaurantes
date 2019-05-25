@@ -149,7 +149,7 @@ public class InsumoController implements Serializable {
             }
             if (object instanceof Insumo) {
                 Insumo o = (Insumo) object;
-                return getStringKey(o.getIdInsumo());
+                return o.getIdInsumo();
             } else {
                 Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "object {0} is of type {1}; expected type: {2}", new Object[]{object, object.getClass().getName(), Insumo.class.getName()});
                 return null;

@@ -52,6 +52,7 @@ public class DetallesPedidoPersistence {
 
             }
             rs.close();
+            
         } catch (Exception e) {
             System.out.println("no se logro la conexion");
         }

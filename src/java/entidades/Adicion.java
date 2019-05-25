@@ -37,7 +37,7 @@ public class Adicion implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "idadicion")
-    private Integer idadicion;
+    private String idadicion;
     @Size(max = 45)
     @Column(name = "adicion_nombre")
     private String adicionNombre;
@@ -51,15 +51,15 @@ public class Adicion implements Serializable {
     public Adicion() {
     }
 
-    public Adicion(Integer idadicion) {
+    public Adicion(String idadicion) {
         this.idadicion = idadicion;
     }
 
-    public Integer getIdadicion() {
+    public String getIdadicion() {
         return idadicion;
     }
 
-    public void setIdadicion(Integer idadicion) {
+    public void setIdadicion(String idadicion) {
         this.idadicion = idadicion;
     }
 

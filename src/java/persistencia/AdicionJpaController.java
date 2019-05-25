@@ -71,7 +71,7 @@ public class AdicionJpaController implements Serializable {
             }
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                Integer id = adicion.getIdadicion();
+                String id = adicion.getIdadicion();
                 if (findAdicion(id) == null) {
                     throw new NonexistentEntityException("The adicion with id " + id + " no longer exists.");
                 }
@@ -136,7 +136,7 @@ public class AdicionJpaController implements Serializable {
         }
     }
 
-    public Adicion findAdicion(Integer id) {
+    public Adicion findAdicion(String id) {
         EntityManager em = getEntityManager();
         try {
             return em.find(Adicion.class, id);

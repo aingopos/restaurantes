@@ -20,7 +20,6 @@ import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 
 @ManagedBean(name = "facturaController")
-@SessionScoped
 public class FacturaController implements Serializable {
 
     @EJB
